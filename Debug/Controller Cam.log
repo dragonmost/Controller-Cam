@@ -1,17 +1,9 @@
-﻿Build started 2015-07-16 16:16:03.
-     1>Project "c:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Controller Cam\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(29): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(34): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(39): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(93): warning C4101: 'JS' : unreferenced local variable
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Controller Cam\SFML-2.3\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.lib" /MACHINE:X86 Debug\main.obj
-         Controller Cam.vcxproj -> c:\users\baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.exe
-     1>Done Building Project "c:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" (Build target(s)).
+﻿Build started 2015-07-18 01:25:28.
+     1>Project "C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         Controller Cam.vcxproj -> C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.exe
+     1>Done Building Project "C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.13
+Time Elapsed 00:00:00.03

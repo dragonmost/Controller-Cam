@@ -1,0 +1,22 @@
+################################################################################################
+## Please enter the Id of the controller you want to monitor (usualy between 0-9)
+## Also the Id for each button on the controller (between 1-16).
+## You can find the button values in Control Panel/Hardware and Sound/Devices and Printers.
+## Right Click Game Controllers Parameters/Properties. You can then see wich number light up.
+## If the setup file is broken try deleting it and starting up the .exe again.
+################################################################################################
+
+Setting
+Joystrick ID: 2
+A: 2
+B: 3
+X: 1
+Y: 4
+Z: 8
+Start: 10
+L: 5
+R: 6
+Up: 13
+Right: 14
+Down: 15
+Left: 16
