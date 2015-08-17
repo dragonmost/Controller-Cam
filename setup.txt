@@ -1,5 +1,6 @@
 ################################################################################################
-## Please enter the Id of the controller you want to monitor (usualy between 0-9)
+## Please enter the Id of the controller you want to monitor (usualy between 0-9),
+## the controller name (supports SNES and GAMECUBE),
 ## Also the Id for each button on the controller (between 1-16).
 ## You can find the button values in Control Panel/Hardware and Sound/Devices and Printers.
 ## Right Click Game Controllers Parameters/Properties. You can then see wich number light up.
@@ -7,7 +8,8 @@
 ################################################################################################
 
 Setting
-Joystrick ID: 2
+Joystrick ID: 0
+ControllerName: SNES
 A: 2
 B: 3
 X: 1

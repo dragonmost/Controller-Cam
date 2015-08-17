@@ -19,4 +19,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Controller.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DPad.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

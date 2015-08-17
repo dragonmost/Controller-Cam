@@ -1,9 +1,24 @@
-﻿Build started 2015-07-18 01:25:28.
+﻿Build started 2015-08-17 17:06:14.
      1>Project "C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" on node 2 (Build target(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Controller Cam\SFML-2.3\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\dpad.h(13): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\dpad.h(14): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\button.h(8): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\button.h(9): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\controller.h(54): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\controller.h(56): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(59): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(67): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(74): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(79): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\baker\documents\visual studio 2013\projects\controller cam\main.cpp(26): warning C4101: 'JS' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Baker\Documents\Visual Studio 2013\Projects\Controller Cam\SFML-2.3\lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.lib" /MACHINE:X86 Debug\main.obj
          Controller Cam.vcxproj -> C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Debug\Controller Cam.exe
      1>Done Building Project "C:\Users\Baker\documents\visual studio 2013\Projects\Controller Cam\Controller Cam.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.03
+Time Elapsed 00:00:01.06
