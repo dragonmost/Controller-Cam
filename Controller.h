@@ -12,8 +12,33 @@ class Controller
 public:
 	Controller(string ControllerName)
 	{
-		
-		if (ControllerName == "GAMECUBE")
+	
+		if (ControllerName == "SNES")
+		{
+			nbButton = 12;
+			button.resize(nbButton);
+
+			button[0].setButton(252, 128, 11, Color::Red);	//A
+			button[1].setButton(224, 150, 11, Color::Red);	//B
+			button[2].setButton(224, 107, 11, Color::Red);	//X
+			button[3].setButton(196, 129, 11, Color::Red);	//Y
+
+			button[4].setButton(115, 150, 3.5, Color::Red);	//Select
+			button[4].elipse(4, 1.5, -34);
+			button[5].setButton(146, 150, 3.5, Color::Red);	//Start
+			button[5].elipse(4, 1.5, -34);
+
+			button[6].setButton(45, 75, 7, Color::Red);		//L
+			button[6].elipse(4, 1, -5);
+			button[7].setButton(207, 73, 7, Color::Red);	//R
+			button[7].elipse(4, 1, 5);
+		}
+		else if (ControllerName == "N64")
+		{
+			nbButton = 14;
+			button.resize(nbButton);
+		}
+		else if (ControllerName == "GAMECUBE")
 		{
 			nbButton = 12;
 			button.resize(nbButton);
@@ -41,25 +66,15 @@ public:
 			button[10].setButton(102, 148, 11, Color::Red);	//Down
 			button[11].setButton(90, 139, 15, Color::Red);	//Left
 		}
-		if (ControllerName == "SNES")
+		else if (ControllerName == "PLAYSTATION")
 		{
-			nbButton = 12;
+			nbButton = 16;
 			button.resize(nbButton);
-
-			button[0].setButton(252, 128, 11, Color::Red);	//A
-			button[1].setButton(224, 150, 11, Color::Red);	//B
-			button[2].setButton(224, 107, 11, Color::Red);	//X
-			button[3].setButton(196, 129, 11, Color::Red);	//Y
-
-			button[4].setButton(115, 150, 3.5, Color::Red);	//Select
-			button[4].elipse(4, 1.5, -34);
-			button[5].setButton(146, 150, 3.5, Color::Red);	//Start
-			button[5].elipse(4, 1.5, -34);
-
-			button[6].setButton(45, 75, 7, Color::Red);		//L
-			button[6].elipse(4, 1, -5);
-			button[7].setButton(207, 73, 7, Color::Red);	//R
-			button[7].elipse(4, 1, 5);
+		}
+		else if (ControllerName == "WIIUPRO")
+		{
+			nbButton = 14;
+			button.resize(nbButton);
 		}
 		else
 		{

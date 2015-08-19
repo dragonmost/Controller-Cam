@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <iostream>
 #include <fstream>
+#include "Config.h"
 #include "DPad.h"
 #include "Button.h"
 #include "Controller.h"
@@ -27,10 +28,10 @@ int main()
 	Texture controllerText;
 	string ControllerName;
 	Sprite ControllerSprite;
-	Texture stickText;
-	Sprite Stick;
-	Texture cstickText;
-	Sprite CStick;
+	Texture LStickText;
+	Sprite LStick;
+	Texture RStickText;
+	Sprite RStick;
 	CircleShape Button[6];		//A, B, X, Y, Z, Start;
 	CircleShape Trigger[2];		//L, R;
 	RectangleShape DPad[4];		//Up, Right, Down, Left;
@@ -38,6 +39,8 @@ int main()
 	int ButtonID[12];	// A, B, X, Y, L, R, Z, Start, Up, Right, Left, Right;
 	Font font;
 	Text warning;
+
+	Config* config;
 
 	ifstream SetupFile;
 	SetupFile.open("setup.txt");
@@ -69,15 +72,25 @@ int main()
 
 	if (ControllerName == "GAMECUBE")
 	{
-		stickText.loadFromFile("Texture\\STICK.png");
-		Stick.setTexture(stickText);
-		Stick.setScale(0.3, 0.3);
-		Stick.setPosition(STICKX, STICKY);
+		LStickText.loadFromFile("Texture\\STICK.png");
+		LStick.setTexture(LStickText);
+		LStick.setScale(0.3, 0.3);
+		LStick.setPosition(STICKX, STICKY);
 
-		cstickText.loadFromFile("Texture\\C-STICK.png");
-		CStick.setTexture(cstickText);
-		CStick.setScale(0.3, 0.3);
-		CStick.setPosition(CSTICKX, CSTICKY);
+		RStickText.loadFromFile("Texture\\C-STICK.png");
+		RStick.setTexture(RStickText);
+		RStick.setScale(0.3, 0.3);
+		RStick.setPosition(CSTICKX, CSTICKY);
+	}
+	else if (ControllerName == "N64")
+	{
+		LStickText.loadFromFile("Texture\\N64_STICK.png");
+		LStick.setTexture(LStickText);
+		LStick.setScale(0.3, 0.3);
+		LStick.setPosition(STICKX, STICKY);
+	}
+	else if (ControllerName == "Playstation")
+	{
 	}
 
 	while (window.isOpen())
@@ -89,8 +102,18 @@ int main()
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
+			{
+				delete config;
 				window.close();
+			}
+
+			if (event.type == Event::MouseButtonPressed && Mouse::isButtonPressed(Mouse::Right))
+			{
+				config = new Config();
+			}
 		}
+
+		
 
 		for (int i = 0; i < controller->getNbButton() -1; i++)
 		{
@@ -98,12 +121,12 @@ int main()
 				window.draw(controller->getButton(i));
 		}
 
-		Stick.setPosition(STICKX + JS.getAxisPosition(2, JS.X) / 10, STICKY + JS.getAxisPosition(2, JS.Y)/ 10);
-		CStick.setPosition(CSTICKX + JS.getAxisPosition(2, JS.R) / 10, CSTICKY + JS.getAxisPosition(2, JS.Z) / 10);
+		LStick.setPosition(STICKX + JS.getAxisPosition(2, JS.X) / 10, STICKY + JS.getAxisPosition(2, JS.Y)/ 10);
+		RStick.setPosition(CSTICKX + JS.getAxisPosition(2, JS.R) / 10, CSTICKY + JS.getAxisPosition(2, JS.Z) / 10);
 
 
-		window.draw(Stick);
-		window.draw(CStick);
+		window.draw(LStick);
+		window.draw(RStick);
 
 		window.draw(warning);
 		window.display();

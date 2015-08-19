@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="DPad.h" />
   </ItemGroup>
