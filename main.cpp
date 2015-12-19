@@ -2,10 +2,10 @@
 #include <Windows.h>
 #include <iostream>
 #include <fstream>
-#include "Config.h"
 #include "DPad.h"
 #include "Button.h"
 #include "Controller.h"
+#include "Config.h"
 
 #define STICKX 52
 #define STICKY 67
@@ -23,17 +23,15 @@ int main()
 	FreeConsole();
 	sf::RenderWindow window(sf::VideoMode(300, 250), "Controller Cam");
 
-	Controller *controller;
+	Controller* controller;
 	Joystick JS;
-	Texture controllerText;
 	string ControllerName;
-	Sprite ControllerSprite;
 	Texture LStickText;
 	Sprite LStick;
 	Texture RStickText;
 	Sprite RStick;
-	CircleShape Button[6];		//A, B, X, Y, Z, Start;
-	CircleShape Trigger[2];		//L, R;
+	//CircleShape Button[6];		//A, B, X, Y, Z, Start;
+	//CircleShape Trigger[2];		//L, R;
 	RectangleShape DPad[4];		//Up, Right, Down, Left;
 	int JSID = 0;
 	int ButtonID[12];	// A, B, X, Y, L, R, Z, Start, Up, Right, Left, Right;
@@ -65,11 +63,6 @@ int main()
 		warning.setPosition(10, 220);
 	}
 
-	controllerText.loadFromFile("Texture\\" + ControllerName + ".png");
-	ControllerSprite.setTexture(controllerText);
-	ControllerSprite.setScale(0.3, 0.3);
-	ControllerSprite.setPosition(0, -30);
-
 	if (ControllerName == "GAMECUBE")
 	{
 		LStickText.loadFromFile("Texture\\STICK.png");
@@ -96,7 +89,7 @@ int main()
 	while (window.isOpen())
 	{
 		window.clear();
-		window.draw(ControllerSprite);
+		window.draw(controller->getControllerSprite());
 
 		sf::Event event;
 		while (window.pollEvent(event))
@@ -104,12 +97,13 @@ int main()
 			if (event.type == sf::Event::Closed)
 			{
 				delete config;
+				delete controller;
 				window.close();
 			}
 
 			if (event.type == Event::MouseButtonPressed && Mouse::isButtonPressed(Mouse::Right))
 			{
-				config = new Config();
+				config = new Config(controller);
 			}
 		}
 

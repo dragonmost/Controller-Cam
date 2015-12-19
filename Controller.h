@@ -3,6 +3,7 @@ using namespace std;
 
 class Controller
 {
+	string Name;
 	int nbButton;
 	DPad dPad[4];
 	vector<Button> button;
@@ -10,9 +11,23 @@ class Controller
 	Sprite controller;
 
 public:
+	Controller()
+	{}
 	Controller(string ControllerName)
 	{
-	
+		Name = ControllerName;
+		setController(Name);
+	}
+
+	void setController(string ControllerName)
+	{
+		Name = ControllerName;
+
+		controllerText.loadFromFile("Texture\\" + ControllerName + ".png");
+		controller.setTexture(controllerText);
+		controller.setScale(0.3, 0.3);
+		controller.setPosition(0, -30);
+
 		if (ControllerName == "SNES")
 		{
 			nbButton = 12;
@@ -55,11 +70,11 @@ public:
 			button[3].setButton(220, 43, 10, Color::Red);	//Y
 			button[4].setButton(240, 20, 10, Color::Red);	//Z
 			button[5].setButton(146, 78, 7, Color::Red);	//Start
-			
+
 			button[6].setButton(38, 30, 7, Color::Red);		//L
 			button[6].elipse(3, 1, -20);
 			button[7].setButton(230, 18, 7, Color::Red);	//R
-			button[7].elipse(3, 1, 20);	
+			button[7].elipse(3, 1, 20);
 
 			button[8].setButton(102, 125, 11, Color::Red);	//Up
 			button[9].setButton(111, 139, 15, Color::Red);	//Right
@@ -78,7 +93,12 @@ public:
 		}
 		else
 		{
-		}		
+		}
+	}
+
+	Sprite getControllerSprite()
+	{
+		return controller;
 	}
 
 	CircleShape getButton(int buttonID)
